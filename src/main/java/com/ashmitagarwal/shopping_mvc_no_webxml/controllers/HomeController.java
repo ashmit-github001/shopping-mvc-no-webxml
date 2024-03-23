@@ -12,32 +12,32 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HomeController {
 
 	@ResponseBody
-	@RequestMapping("test")
+	@RequestMapping("/test")
 	public String test()
 	{
 		return "Hello World";
 	}
 	
-	@RequestMapping("homepage")
+	@RequestMapping("/homepage")
 	public String homepage()
 	{
 		return "HomePage";
 	}
 	
-	@RequestMapping("userLogin")
+	@RequestMapping("/userLogin")
 	public String userLogin()
 	{
 		return "UserLoginPage";
 	}
 	
-	@RequestMapping("userRegistration")
+	@RequestMapping("/userRegistration")
 	public String userRegistration()
 	{
 		return "UserRegistrationPage";
 	}
 	
 	@ResponseBody
-	@PostMapping("userLogin")
+	@PostMapping("/userLogin")
 	public String userLogin(@RequestParam Map<String, String> params)
 	{
 		String username = params.get("username");
@@ -52,7 +52,7 @@ public class HomeController {
 	}
 	
 	@ResponseBody
-	@PostMapping("userRegistration")
+	@PostMapping("/userRegistration")
 	public String userRegistration(@RequestParam Map<String, String> params)
 	{
 		String fname = params.get("fname");
